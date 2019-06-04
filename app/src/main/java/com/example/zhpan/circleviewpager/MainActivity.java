@@ -1,5 +1,6 @@
 package com.example.zhpan.circleviewpager;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -65,6 +66,8 @@ public class MainActivity extends AppCompatActivity {
                 List<DataBean> list = mViewpager.getList();
                 String describe = list.get(position).getDescribe();
                 Toast.makeText(MainActivity.this, "点击了" + list.get(position).getDescribe(), Toast.LENGTH_SHORT).show();
+
+                startActivity(new Intent(MainActivity.this,SecondActivity.class));
             }
         });
         //  设置数据

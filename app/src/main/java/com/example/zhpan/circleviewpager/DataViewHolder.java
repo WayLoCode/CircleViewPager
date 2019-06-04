@@ -34,12 +34,12 @@ public class DataViewHolder implements ViewHolder<DataBean> {
         final DataBean dataBean = (DataBean) data;
         ImageLoaderUtil.loadImg(mImageView, dataBean.getUrl(), R.drawable.placeholder);
         mTvDescribe.setText(dataBean.getDescribe());
-        mImageView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(context, position + "点击了" + dataBean.getDescribe() + "  页面数" + size, Toast.LENGTH_SHORT).show();
-
-            }
-        });
+//        mImageView.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Toast.makeText(context, position + "点击了" + dataBean.getDescribe() + "  页面数" + size, Toast.LENGTH_SHORT).show();
+//
+//            }
+//        });
     }
 }
