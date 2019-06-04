@@ -215,8 +215,8 @@ public class CircleViewPager<T, M extends ViewHolder> extends FrameLayout {
         // mDotList.clear();
         mLlIndicator.removeAllViews();
         //  设置LinearLayout的子控件的宽高，这里单位是像素。
-        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams((int) indicatorRadius * 2, (int) indicatorRadius * 2);
-        params.rightMargin = (int) (indicatorRadius * 2 / 1.5);
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams((int) indicatorRadius * 4, (int) indicatorRadius * 2);
+        params.rightMargin = (int) (indicatorRadius);
         if (mList.size() > 1) {
             //  for循环创建mUrlList.size()个ImageView（小圆点）
             for (int i = 0; i < mList.size(); i++) {

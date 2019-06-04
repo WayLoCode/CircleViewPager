@@ -4,6 +4,7 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.graphics.RectF;
 import android.util.AttributeSet;
 import android.view.View;
 
@@ -41,7 +42,14 @@ public class DotView extends View {
         int width = getWidth();
         int height = getHeight();
         float radius = Math.min(width, height) / 2;
-        canvas.drawCircle(width / 2, height / 2, radius, mPaint);
+        if (isChecked) {
+            // 设置个新的长方形
+            RectF oval = new RectF(0, height, width, 0);
+            //第二个参数是x半径，第三个参数是y半径
+            canvas.drawRoundRect(oval, radius, radius, mPaint);
+        } else {
+            canvas.drawCircle(width / 2, height / 2, radius, mPaint);
+        }
     }
 
     public boolean isChecked() {
