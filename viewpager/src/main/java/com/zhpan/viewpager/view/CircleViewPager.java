@@ -268,6 +268,7 @@ public class CircleViewPager<T, M extends ViewHolder> extends FrameLayout {
         if (list == null || holderCreator == null) {
             return;
         }
+        mList.clear();
         mList.addAll(list);
         this.holderCreator = holderCreator;
     }
