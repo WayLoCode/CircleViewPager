@@ -144,7 +144,8 @@ public class CircleViewPager<T, M extends ViewHolder> extends FrameLayout {
         if (mList.size() == 0) {
             setVisibility(GONE);
         } else if (mList.size() == 1) {
-            mListAdd.add(mList.get(0));
+            isCanLoop = false;
+            createData();
             setVisibility(VISIBLE);
         } else if (mList.size() > 1) {
             createData();
